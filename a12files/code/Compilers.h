@@ -68,8 +68,8 @@
 #define STR_LANGNAME	"Joe"
 
 /* Logical constants - adapt for your language */
-#define JOE_TRUE  1
-#define JOE_FALSE 0
+#define True 1
+#define False 0
 
 /*
 ------------------------------------------------------------
@@ -81,9 +81,9 @@ NOTE: Some types may not be directly used by your language,
 
 
 /* TO_DO: Define your typedefs */
-typedef char			joe_char;
+//typedef char			joe_char;
 typedef char* 			joe_string;
-typedef int				joe_int;
+//typedef int				joe_int;
 typedef float			joe_float;
 typedef void			joe_void;
 
@@ -91,7 +91,7 @@ typedef unsigned char	joe_boln;
 typedef unsigned char	joe_byte;
 
 typedef long			joe_long;
-typedef double			joe_doub;
+// typedef double			joe_doub;
 
 /*
 ------------------------------------------------------------
@@ -113,7 +113,7 @@ Main functions signatures
 (Code will be updated during next assignments)
 ------------------------------------------------------------
 */
-joe_int mainReader(joe_int argc, joe_string* argv);
+int mainReader(int argc, joe_string* argv);
 
 /* 
 TO_DO: Include later mainScaner (A22) and mainParser (A32)

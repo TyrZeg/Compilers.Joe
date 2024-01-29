@@ -98,8 +98,8 @@
 joe_void bErrorPrint(joe_string fmt, ...);
 joe_void displayBuffer(Buffer* ptr_Buffer);
 joe_long getFileSize(joe_string fname);
-joe_int isNumber(const joe_string ns);
-joe_void startReader(joe_string, joe_string, joe_char, joe_int, joe_int);
+int isNumber(const joe_string ns);
+joe_void startReader(joe_string, joe_string, char, int, int);
 
 /*
 ************************************************************
@@ -111,13 +111,13 @@ joe_void startReader(joe_string, joe_string, joe_char, joe_int, joe_int);
 ************************************************************
 */
 
-joe_int mainReader(joe_int argc, joe_string* argv) {
+int mainReader(int argc, joe_string* argv) {
 
 	/* Create source input buffer */
 	joe_string program = argv[0];
 	joe_string input = argv[2];
-	joe_char mode = MODE_FIXED;
-	joe_int size = 0, increment = 0, wrongNumber = 0;
+	char mode = MODE_FIXED;
+	int size = 0, increment = 0, wrongNumber = 0;
 
 	/* Missing file name or/and mode parameter */
 	if (argc <= 2) {
@@ -169,12 +169,12 @@ joe_int mainReader(joe_int argc, joe_string* argv) {
 *	- Increment: buffer increment.
 ************************************************************
 */
-joe_void startReader(joe_string program, joe_string input, joe_char mode, joe_int size, joe_int increment) {
+joe_void startReader(joe_string program, joe_string input, char mode, int size, int increment) {
 
 	BufferPointer bufferp;		/* pointer to Buffer structure */
 	FILE* fileHandler;			/* input file handle */
-	joe_int loadSize = 0;		/* the size of the file loaded in the buffer */
-	joe_char symbol;			/* symbol read from input file */
+	int loadSize = 0;		/* the size of the file loaded in the buffer */
+	char symbol;			/* symbol read from input file */
 
 	/* Create buffer */
 	bufferp = readerCreate(size, (char)increment, mode);
@@ -277,8 +277,8 @@ joe_long getFileSize(joe_string fname) {
 ************************************************************
 */
 
-joe_int isNumber(const joe_string ns) {
-	joe_char c; joe_int i = 0;
+int isNumber(const joe_string ns) {
+	char c; int i = 0;
 	if (ns == NULL) return 0;
 	while ((c = ns[i++]) == 0) {
 		if (!isdigit(c)) return 0;

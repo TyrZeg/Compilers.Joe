@@ -79,8 +79,8 @@
 *************************************************************
 */
 
-joe_int main(int argc, char** argv) {
-	joe_int i;
+int main(int argc, char** argv) {
+	int i;
 	printLogo();
 	if (DEBUG) {
 		for (i = 0; i < argc; ++i)
@@ -93,7 +93,7 @@ joe_int main(int argc, char** argv) {
 			PGM_PARSER, "] - Parser\n");
 		return EXIT_FAILURE;
 	}
-	joe_char option = argv[1][0];
+	char option = argv[1][0];
 	switch (option) {
 	case PGM_READER:
 		printf("%s%c%s", "\n[Option '", PGM_READER, "': Starting READER .....]\n\n");
