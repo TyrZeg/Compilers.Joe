@@ -95,11 +95,11 @@
  *  Function declarations
  * -------------------------------------------------------------
  */
-joe_void bErrorPrint(joe_string fmt, ...);
+joe_void bErrorPrint(str fmt, ...);
 joe_void displayBuffer(Buffer* ptr_Buffer);
-joe_long getFileSize(joe_string fname);
-int isNumber(const joe_string ns);
-joe_void startReader(joe_string, joe_string, char, int, int);
+joe_long getFileSize(str fname);
+int isNumber(const str ns);
+joe_void startReader(str, str, char, int, int);
 
 /*
 ************************************************************
@@ -111,11 +111,11 @@ joe_void startReader(joe_string, joe_string, char, int, int);
 ************************************************************
 */
 
-int mainReader(int argc, joe_string* argv) {
+int mainReader(int argc, str* argv) {
 
 	/* Create source input buffer */
-	joe_string program = argv[0];
-	joe_string input = argv[2];
+	str program = argv[0];
+	str input = argv[2];
 	char mode = MODE_FIXED;
 	int size = 0, increment = 0, wrongNumber = 0;
 
@@ -169,7 +169,7 @@ int mainReader(int argc, joe_string* argv) {
 *	- Increment: buffer increment.
 ************************************************************
 */
-joe_void startReader(joe_string program, joe_string input, char mode, int size, int increment) {
+joe_void startReader(str program, str input, char mode, int size, int increment) {
 
 	BufferPointer bufferp;		/* pointer to Buffer structure */
 	FILE* fileHandler;			/* input file handle */
@@ -232,7 +232,7 @@ joe_void startReader(joe_string program, joe_string input, char mode, int size, 
 ************************************************************
 */
 
-joe_void bErrorPrint(joe_string fmt, ...) {
+joe_void bErrorPrint(str fmt, ...) {
 	/* Initialize variable list */
 	va_list ap;
 	va_start(ap, fmt);
@@ -253,7 +253,7 @@ joe_void bErrorPrint(joe_string fmt, ...) {
 ************************************************************
 */
 
-joe_long getFileSize(joe_string fname) {
+joe_long getFileSize(str fname) {
 	FILE* input;
 	joe_long flength;
 	input = fopen(fname, "r");
@@ -277,7 +277,7 @@ joe_long getFileSize(joe_string fname) {
 ************************************************************
 */
 
-int isNumber(const joe_string ns) {
+int isNumber(const str ns) {
 	char c; int i = 0;
 	if (ns == NULL) return 0;
 	while ((c = ns[i++]) == 0) {

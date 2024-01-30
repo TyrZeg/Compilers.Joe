@@ -1,0 +1,3 @@
+/mnt/c/Users/boobe/Code/Compilers/a12files/code/build/CMakeFiles/Compiler.dir
+/mnt/c/Users/boobe/Code/Compilers/a12files/code/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/boobe/Code/Compilers/a12files/code/build/CMakeFiles/rebuild_cache.dir

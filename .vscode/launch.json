@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/boobe/Code/Compilers",
-      "program": "c:/Users/boobe/Code/Compilers/build/Debug/outDebug",
+      "cwd": "c:/Users/boobe/Code/Compilers/a12files/code",
+      "program": "c:/Users/boobe/Code/Compilers/a12files/code/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
