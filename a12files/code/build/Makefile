@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Compiler
+# Target rules for targets named Joe
 
 # Build rule for target.
-Compiler: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Compiler
-.PHONY : Compiler
+Joe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Joe
+.PHONY : Joe
 
 # fast build rule for target.
-Compiler/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/build
-.PHONY : Compiler/fast
+Joe/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Joe.dir/build.make CMakeFiles/Joe.dir/build
+.PHONY : Joe/fast
 
 Compilers.o: Compilers.c.o
 .PHONY : Compilers.o
 
 # target to build an object file
 Compilers.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/Compilers.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Joe.dir/build.make CMakeFiles/Joe.dir/Compilers.c.o
 .PHONY : Compilers.c.o
 
 Compilers.i: Compilers.c.i
@@ -142,7 +142,7 @@ Compilers.i: Compilers.c.i
 
 # target to preprocess a source file
 Compilers.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/Compilers.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Joe.dir/build.make CMakeFiles/Joe.dir/Compilers.c.i
 .PHONY : Compilers.c.i
 
 Compilers.s: Compilers.c.s
@@ -150,7 +150,7 @@ Compilers.s: Compilers.c.s
 
 # target to generate assembly for a file
 Compilers.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/Compilers.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Joe.dir/build.make CMakeFiles/Joe.dir/Compilers.c.s
 .PHONY : Compilers.c.s
 
 MainReader.o: MainReader.c.o
@@ -158,7 +158,7 @@ MainReader.o: MainReader.c.o
 
 # target to build an object file
 MainReader.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/MainReader.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Joe.dir/build.make CMakeFiles/Joe.dir/MainReader.c.o
 .PHONY : MainReader.c.o
 
 MainReader.i: MainReader.c.i
@@ -166,7 +166,7 @@ MainReader.i: MainReader.c.i
 
 # target to preprocess a source file
 MainReader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/MainReader.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Joe.dir/build.make CMakeFiles/Joe.dir/MainReader.c.i
 .PHONY : MainReader.c.i
 
 MainReader.s: MainReader.c.s
@@ -174,7 +174,7 @@ MainReader.s: MainReader.c.s
 
 # target to generate assembly for a file
 MainReader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/MainReader.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Joe.dir/build.make CMakeFiles/Joe.dir/MainReader.c.s
 .PHONY : MainReader.c.s
 
 Reader.o: Reader.c.o
@@ -182,7 +182,7 @@ Reader.o: Reader.c.o
 
 # target to build an object file
 Reader.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/Reader.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Joe.dir/build.make CMakeFiles/Joe.dir/Reader.c.o
 .PHONY : Reader.c.o
 
 Reader.i: Reader.c.i
@@ -190,7 +190,7 @@ Reader.i: Reader.c.i
 
 # target to preprocess a source file
 Reader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/Reader.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Joe.dir/build.make CMakeFiles/Joe.dir/Reader.c.i
 .PHONY : Reader.c.i
 
 Reader.s: Reader.c.s
@@ -198,7 +198,7 @@ Reader.s: Reader.c.s
 
 # target to generate assembly for a file
 Reader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compiler.dir/build.make CMakeFiles/Compiler.dir/Reader.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Joe.dir/build.make CMakeFiles/Joe.dir/Reader.c.s
 .PHONY : Reader.c.s
 
 # Help Target
@@ -209,7 +209,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Compiler"
+	@echo "... Joe"
 	@echo "... Compilers.o"
 	@echo "... Compilers.i"
 	@echo "... Compilers.s"

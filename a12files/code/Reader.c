@@ -88,12 +88,15 @@
 BufferPointer readerCreate(int size, int increment, int mode) {
 	BufferPointer readerPointer;
 	/* TO_DO: Defensive programming  DONE*/
-	if(!size)
+	if(!size){
 		size = READER_DEFAULT_SIZE;
-	if(increment <= 0)
-		increment = READER_DEFAULT_INCREMENT;
-	if(mode != MODE_FIXED && mode != MODE_ADDIT && mode != MODE_MULTI)	
+		increment = READER_DEFAULT_INCREMENT;}
+
+	if(!increment)
 		mode = MODE_FIXED;
+	
+	if(mode != MODE_FIXED && mode != MODE_ADDIT && mode != MODE_MULTI)	
+		return NULL;
 	/* TO_DO: Adjust the values according to parameters */
 	readerPointer = (BufferPointer)calloc(1, sizeof(Buffer));
 	if (!readerPointer)

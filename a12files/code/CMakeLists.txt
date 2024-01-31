@@ -33,10 +33,10 @@
 
 cmake_minimum_required (VERSION 3.8)
 
-project ("Compiler")
+project ("Joe")
 
 # Add source to this project's executable: check name and dependences
-add_executable (Compiler
+add_executable (Joe
 	"Compilers.h"	"Compilers.c"
 	"Reader.h"		"Reader.c"		"MainReader.c"
 	#"Scanner.h"		"Scanner.c"		"MainScanner.c"
