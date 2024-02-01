@@ -4,15 +4,15 @@
 :: ---------------------------------------------------------------------
 
 CLS
-SET COMPILER=Joe.exe
+SET COMPILER=joe.exe
 
 SET FILE1=Magic8
 SET FILE2=Password
-SET FILE3=INPUT2_Volume
-SET FILE4=INPUT3_Factorial
-SET FILE5=INPUT4_Datatypes
-SET FILE6=INPUT5_General
-SET FILE7=INPUT6_Big
+SET FILE3=OddEven
+SET FILE4=Anagram
+::SET FILE5=INPUT4_Datatypes
+::SET FILE6=INPUT5_General
+::SET FILE7=INPUT6_Big
 
 :: 1:12:28
 SET ASSIGNMENT=A12
@@ -28,8 +28,9 @@ SET PARAM=r
 
 @echo off
 
-ECHO "=---------------------------------------="
-ECHO "|  COMPILERS - ALGONQUIN COLLEGE (F23)  |"
+ECHO "=-------------------------------------------------------------------------="
+ECHO "|                COMPILERS - ALGONQUIN COLLEGE (W24)                      |"
+ECHO "=-------------------------------------------------------------------------="
 ECHO "          _____                   _______                   _____          " 
 ECHO "         /\    \                 /::\    \                 /\    \         " 
 ECHO "        /::\    \               /::::\    \               /::\    \        " 
@@ -52,6 +53,7 @@ ECHO "                                 \::/____/               \:::\____\       
 ECHO "                                  ~~                      \::/    /        " 
 ECHO "                                                           \/____/         " 
 ECHO "                                                                           " 
+ECHO "=-------------------------------------------------------------------------="
 ECHO "                                   "
 ECHO "[READER SCRIPT .........................]"
 ECHO "                                   "
