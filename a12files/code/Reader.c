@@ -104,7 +104,7 @@ BufferPointer readerCreate(int size, int increment, int mode) {
 	if(!readerPointer -> content)
 		return NULL;
 	/* TO_DO: Initialize the histogram DONE*/
-	for(int i; i < NCHAR; i++ )
+	for (int i = 0; i < NCHAR; i++)
 		readerPointer -> histogram[i] = 0;
 	readerPointer->size = size;
 	readerPointer->increment = increment;

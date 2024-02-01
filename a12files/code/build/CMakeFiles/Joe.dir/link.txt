@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/Joe.dir/Compilers.c.o CMakeFiles/Joe.dir/Reader.c.o CMakeFiles/Joe.dir/MainReader.c.o -o Joe 
