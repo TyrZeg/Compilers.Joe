@@ -1,8 +1,8 @@
 /*
 ************************************************************
 * COMPILERS COURSE - Algonquin College
-* Code version: Fall, 2023
-* Author: Brayden Johnston
+* Code version: Spring, 2024
+* Author: Brayden / Lys
 * Professors: Paulo Sousa
 ************************************************************
 =---------------------------------------------------------------------------=

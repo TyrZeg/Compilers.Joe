@@ -2,7 +2,7 @@
 ************************************************************
 * COMPILERS COURSE - Algonquin College
 * Code version: Fall, 2023
-* Author: TO_DO
+* Author: Brayden / Lys
 * Professors: Paulo Sousa
 ************************************************************
 =---------------------------------------------------------------------------=
@@ -79,7 +79,7 @@ NOTE: Some types may not be directly used by your language,
 
 
 /* TO_DO: Define your typedefs */
-//typedef char			joe_char;
+typedef char			joe_char;
 typedef char* 			str;
 //typedef int				joe_int;
 typedef float			joe_float;
@@ -89,7 +89,25 @@ typedef unsigned char	joe_boln;
 typedef unsigned char	joe_byte;
 
 typedef long			joe_long;
-typedef double			joe_doub;
+//typedef double			joe_doub;
+typedef struct {
+    int rows;
+    int cols;
+    float **data; // Assuming a 2D array of floats for matrix representation
+} joe_matrix;
+
+typedef struct {
+    int size;
+    float *data; // Assuming a 1D array of floats
+} joe_array;
+
+typedef union {
+    int int_val;
+    float float_val;
+    char char_val;
+    // Add more data types as needed
+} joe_nonType;
+
 
 /*
 ------------------------------------------------------------
@@ -112,6 +130,8 @@ Main functions signatures
 ------------------------------------------------------------
 */
 int mainReader(int argc, str* argv);
+
+joe_long mainScanner(joe_long argc, str* argv);
 
 /* 
 TO_DO: Include later mainScaner (A22) and mainParser (A32)

@@ -2,7 +2,7 @@
 ************************************************************
 * COMPILERS COURSE - Algonquin College
 * Code version: Winter, 2024
-* Author: Brayden Johnston
+* Author: Brayden / Lys
 * Professors: Paulo Sousa
 ************************************************************
 =---------------------------------------------------------------------------=
@@ -96,6 +96,10 @@ int main(int argc, char** argv) {
 	case PGM_READER:
 		printf("%s%c%s", "\n[Option '", PGM_READER, "': Starting READER .....]\n\n");
 		mainReader(argc, argv);
+		break;
+	case PGM_SCANNER:
+	printf("%s%c%s", "\n[Option '", PGM_SCANNER, "': Starting SCANNER .....]\n\n");
+		mainScanner(argc, argv);
 		break;
 	/* TO_DO: Include later SCANNER (A22) and PARSER (A32) */
 	default:

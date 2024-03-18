@@ -2,7 +2,7 @@
 ************************************************************
 * COMPILERS COURSE - Algonquin College
 * Code version: Fall, 2023
-* Author: TO_DO
+* Author: Brayden / Lys
 * Professors: Paulo Sousa
 ************************************************************
 =---------------------------------------------------------------------------=
@@ -86,7 +86,7 @@ enum READER_MODE {
 /* You should add your own constant definitions here */
 #define READER_MAX_SIZE	INT_MAX-1	/* maximum capacity */ 
 
-#define READER_DEFAULT_SIZE			2500		/* default initial buffer reader capacity */
+#define READER_DEFAULT_SIZE			250		/* default initial buffer reader capacity */
 #define READER_DEFAULT_INCREMENT	10		/* default increment factor */
 
 /* Add your bit-masks constant definitions here - Defined for BOA */
