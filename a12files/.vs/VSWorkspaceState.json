@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\code",
-    "\\Run"
+    "\\code"
   ],
-  "SelectedNode": "\\code\\Reader.c",
+  "SelectedNode": "\\code\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }

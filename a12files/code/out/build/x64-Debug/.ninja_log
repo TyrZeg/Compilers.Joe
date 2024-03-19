@@ -1,5 +1,0 @@
-# ninja log v5
-3	88	7284524266757433	CMakeFiles/Joe.dir/Compilers.c.obj	b1fca14f08f6e9ea
-8	90	7284524266757433	CMakeFiles/Joe.dir/Reader.c.obj	bb25689a7cfa6aec
-13	98	7284524266867520	CMakeFiles/Joe.dir/MainReader.c.obj	a07fc973becce0da
-98	375	7284524269390098	Joe.exe	4c952731b92ade01

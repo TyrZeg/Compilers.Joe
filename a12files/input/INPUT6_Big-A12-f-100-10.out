@@ -1,0 +1,82 @@
+	=-----------------------------------------------------------------------------=
+	|                  COMPILERS - ALGONQUIN COLLEGE (W24)                        |
+	=-----------------------------------------------------------------------------=
+	           _____                   _______                   _____            |
+	|         /\    \                 /::\    \                 /\    \           |
+	|        /::\    \               /::::\    \               /::\    \          |
+	|        \:::\    \             /::::::\    \             /::::\    \         |
+	|         \:::\    \           /::::::::\    \           /::::::\    \        |
+	|          \:::\    \         /:::/~~\:::\    \         /:::/\:::\    \       |
+	|           \:::\    \       /:::/    \:::\    \       /:::/__\:::\    \      |
+	|           /::::\    \     /:::/    / \:::\    \     /::::\   \:::\    \     |
+	|  _____   /::::::\    \   /:::/____/   \:::\____\   /::::::\   \:::\    \    |
+	| /\    \ /:::/\:::\    \ |:::|    |     |:::|    | /:::/\:::\   \:::\    \   |
+	|/::\    /:::/  \:::\____\|:::|____|     |:::|    |/:::/__\:::\   \:::\____\  |
+	|\:::\  /:::/    \::/    / \:::\    \   /:::/    / \:::\   \:::\   \::/    /  |
+	| \:::\/:::/    / \/____/   \:::\    \ /:::/    /   \:::\   \:::\   \/____/   |
+	|  \::::::/    /             \:::\    /:::/    /     \:::\   \:::\    \       |
+	|   \::::/    /               \:::\__/:::/    /       \:::\   \:::\____\      |
+	|    \::/    /                 \::::::::/    /         \:::\   \::/    /      |
+	|     \/____/                   \::::::/    /           \:::\   \/____/       |
+	|                                \::::/    /             \:::\    \           |
+	|                                 \::/____/               \:::\____\          |
+	|                                  ~~                      \::/    /          |
+	|                                                           \/____/           |
+	=-----------------------------------------------------------------------------=
+
+[Option 'r': Starting READER .....]
+
+Reading file INPUT6_Big.joe ....Please wait
+The input file INPUT6_Big.joe has not been completely loaded.
+Current size of buffer: 100.
+Last character read from the input file is: d 100
+Input file size: 32533
+
+Printing buffer parameters:
+
+The capacity of the buffer is:  100
+The current size of the buffer is:  100
+The operational mode of the buffer is: f
+The increment factor of the buffer is:  10
+The first symbol in the buffer is:  #
+The value of the flags field is: 00
+Reader statistics : 
+Histogram[	] = 1
+Histogram[
+] = 4
+Histogram[ ] = 17
+Histogram["] = 2
+Histogram[#] = 2
+Histogram[&] = 1
+Histogram[E] = 1
+Histogram[S] = 1
+Histogram[T] = 1
+Histogram[a] = 8
+Histogram[c] = 3
+Histogram[d] = 2
+Histogram[e] = 8
+Histogram[f] = 1
+Histogram[g] = 2
+Histogram[h] = 2
+Histogram[i] = 4
+Histogram[l] = 5
+Histogram[m] = 3
+Histogram[n] = 5
+Histogram[o] = 6
+Histogram[p] = 2
+Histogram[r] = 8
+Histogram[s] = 2
+Histogram[t] = 3
+Histogram[u] = 1
+Histogram[x] = 2
+Histogram[y] = 2
+Histogram[{] = 1
+Number of errors: 0
+
+Printing buffer contents:
+
+# Sofia Example
+  The program is "lexically" correct
+  and should not generate any error #
+main& {
+	

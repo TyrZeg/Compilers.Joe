@@ -1,0 +1,9 @@
+#This program converts Kilometres to Miles
+
+km = float(input("Value in unit kilometers: "))
+
+conversion_factor = 0.621371
+
+# calculate miles
+miles = km * conversion_factor
+print('%0.2f km is equal to %0.2f miles' %(km,miles))

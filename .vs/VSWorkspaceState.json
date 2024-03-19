@@ -3,9 +3,8 @@
     "",
     "\\a12files",
     "\\a12files\\code",
-    "\\a12files\\input",
-    "\\a12files\\Run"
+    "\\build"
   ],
-  "SelectedNode": "\\a12files\\code\\MainReader.c",
+  "SelectedNode": "\\build",
   "PreviewInSolutionExplorer": false
 }

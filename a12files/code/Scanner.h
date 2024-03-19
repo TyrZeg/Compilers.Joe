@@ -225,7 +225,7 @@ typedef struct scannerData {
 #define CHRCOL3 '('
 #define CHRCOL4 '\''
 #define CHRCOL6 '#'
-#define CHRCOL7 '\n'
+#define CHRCOL10 '\n'
 #define CHRCOL8 '.'
 #define CHRCOL9 '='
 /* These constants will be used on VID / MID function */
@@ -245,7 +245,7 @@ typedef struct scannerData {
 
 /* TO_DO: Transition table - type of states defined in separate table */
 static joe_long transitionTable[NUM_STATES][CHAR_CLASSES] = {
-/*    [A-z],[0-9],    _,    (,   \', SEOF,    #, other,    .,	 =,   \n
+/*    [A-z],[0-9],    _,    (,   ', SEOF,    #, other,    .,	 =,   \n
 	   L(0), D(1), U(2), M(3), Q(4), E(5), C(6),  O(7), P(8), V(9), N(10) */
 	{     1,    7, ESNR, ESNR,    4, ESWR,	 11, ESNR, ESNR, ESNR, ESNR},	// S0: NOAS
 	{     1,    1,    1,    2,	  3,    3,    3,    3,	  3,   20,	  3},	// S1: NOAS
@@ -254,7 +254,7 @@ static joe_long transitionTable[NUM_STATES][CHAR_CLASSES] = {
 	{     5,    5,    5,    5,   13, ESWR,	  5,    5,	  5,    5,	  5},	// S4: NOAS
 	{	  5,    5,    5,    5,    6,	5,    5,	5,    5,    5,    5},	// S5: NOAS												  
 	{    FS,   FS,   FS,   FS,   FS,   FS,	 FS,   FS,	 FS,   FS,   FS},	// S6: ASNR (SL)
-	{    FS,    7,   FS,   FS,   FS, ESWR,	 FS,    8,	 17,    8,    8},	// S7: NOAS
+	{     7,    7,    7,    7,    7, ESNR,	 7,    8,	 17,    8,    8},	// S7: NOAS
 	{    FS,   FS,   FS,   FS,   FS,   FS,	 FS,   FS,	 FS,   FS,   FS},	// S8: ASNR (INT)
 	{    FS,   FS,   FS,   FS,   FS,   FS,	 FS,   FS,	 FS,   FS,   FS},	// S9: ASNR (ES)
 	{    FS,   FS,   FS,   FS,   FS,   FS,	 FS,   FS,   FS,   FS,   FS},   // S10: ASWR (ER)
@@ -296,7 +296,7 @@ static joe_long stateType[NUM_STATES] = {
 	FSNR, /* 16 (MCOM) */
 	NOFS, /* 17 */
 	NOFS, /* 18 */
-	FSWR, /* 19 */
+	FSWR, /* 19 (FLOAT)*/
 	FSNR  /* 20 (VAR) */
 };
 
@@ -329,8 +329,8 @@ Token funcID	(str lexeme);
 Token funcCMT   (str lexeme);
 Token funcKEY	(str lexeme);
 Token funcErr	(str lexeme);
-Token funcMLC(str lexeme);
-Token funcFLT(str lexeme);
+Token funcMLC   (str lexeme);
+Token funcFLT   (str lexeme);
 
 /* 
  * Accepting function (action) callback table (array) definition 
@@ -369,7 +369,7 @@ Language keywords
 */
 
 /* TO_DO: Define the number of Keywords from the language */
-#define KWT_SIZE 24
+#define KWT_SIZE 42
 
 /* TO_DO: Define the list of keywords */
 static str keywordTable[KWT_SIZE] = {
@@ -384,21 +384,38 @@ static str keywordTable[KWT_SIZE] = {
 	"while",	/* KW08 */
 	"do",		/* KW09 */
 	"false",	/* KW10 */
-	"random",	/* KW11 */
-	"break",	/* KW12 */
-	"true",		/* KW13 */
-	"class",	/* KW14 */
-	"return",	/* KW15 */
-	"continue",	/* KW16 */
-	"def",		/* KW17 */
-	"del",		/* KW18 */
-	"for",		/* KW19 */
-	"global",	/* KW20 */
-	"nonlocal",	/* KW21 */
-	"try",		/* KW22 */
-	"pow",		/* KW23 */
+	"await",	/* KW11 */
+	"import",	/* KW12 */
+	"pass",		/* KW13 */
+	"break",	/* KW14 */
+	"except",	/* KW15 */
+	"in",		/* KW16 */
+	"raise",	/* KW17 */
+	"true",		/* KW18 */
+	"class",	/* KW19 */
+	"finally",	/* KW20 */
+	"is",		/* KW21 */
+	"return",	/* KW22 */
+	"and",		/* KW23 */
+	"as",		/* KW24 */
+	"assert",	/* KW25 */
+	"continue",	/* KW27 */
+	"def",		/* KW28 */
+	"del",		/* KW29 */
+	"for",		/* KW30 */
+	"elf",		/* KW31 */
+	"from",		/* KW32 */
+	"global",	/* KW33 */
+	"nonlocal",	/* KW34 */
+	"not",		/* KW35 */
+	"or",		/* KW36 */
+	"fact",		/* KW37 */
+	"try",		/* KW38 */
+	"with",		/* KW39 */
+	"pow",		/* KW40 */
+	"input"		/* KW41 */
+	"random"    /* KW42 */
 };
-
 /* NEW SECTION: About indentation */
 
 /*
