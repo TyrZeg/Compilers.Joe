@@ -500,7 +500,7 @@ Token funcID(str lexeme) {
     Token currentToken = { 0 };
     size_t length = strlen(lexeme);
     char lastch = lexeme[length - 1];
-    int isID = False;
+    joe_boln isID = False;
 
     switch (lastch) {
     case MNID_SUF:
@@ -581,24 +581,32 @@ Token funcSL(str lexeme) {
 */
 /* TO_DO: Adjust the function for Keywords */
 
-Token funcKEY(str lexeme)
-{
-	Token currentToken = {0};
-	joe_long kwindex = -1, j = 0;
-	joe_long len = (joe_long)strlen(lexeme);
-	//lexeme[len - 1] = '\0';
-	for (j = 0; j < KWT_SIZE; j++)
-		if (!strcmp(lexeme, &keywordTable[j][0]))
+Token funcKEY(str lexeme) {
+	Token currentToken = { 0 };
+	int kwindex = -1;
+	for (int j = 0; j < KWT_SIZE; j++) {
+		if (!strcmp(lexeme, keywordTable[j])) {
 			kwindex = j;
-	if (kwindex != -1)
-	{
+			break;
+		}
+	}
+	if (kwindex != -1) {
 		currentToken.code = KW_T;
 		scData.scanHistogram[currentToken.code]++;
 		currentToken.attribute.codeType = kwindex;
 	}
-	else
-	{
-		currentToken = funcErr(lexeme);
+	else {
+		int isValidVariable = 1; // Assuming it's a valid variable identifier
+		if (isValidVariable) {
+			currentToken.code = VAR_T; // Assuming VAR_T code is 2
+			// Copy lexeme to token attribute
+			strncpy(currentToken.attribute.idLexeme, lexeme, VID_LEN - 1);
+			currentToken.attribute.idLexeme[VID_LEN - 1] = CHARSEOF0; // Ensure null termination
+		}
+		else {
+			// If it's not a keyword or a valid variable, consider it an error
+			currentToken = funcErr(lexeme);
+		}
 	}
 	return currentToken;
 }
@@ -813,7 +821,7 @@ Token funcMLC(str lexeme)
 			{
 				line++;
 			}
-			else if (lexeme[i] == '\'' && lexeme[i + 1] == '\'' && lexeme[i + 2] == '\'' && lexeme[i + 3] == '\'')
+			else if (lexeme[i] == '\'' && lexeme[i + 1] == '\'' && lexeme[i + 2] == '\'')
 			{
 				i += 2;			// Move two more steps to skip the remaining two single quotes
 				in_comment = 0; // Found the end of the multiline comment

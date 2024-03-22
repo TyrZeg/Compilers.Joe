@@ -369,7 +369,7 @@ Language keywords
 */
 
 /* TO_DO: Define the number of Keywords from the language */
-#define KWT_SIZE 42
+#define KWT_SIZE 41
 
 /* TO_DO: Define the list of keywords */
 static str keywordTable[KWT_SIZE] = {
@@ -383,7 +383,7 @@ static str keywordTable[KWT_SIZE] = {
 	"else",		/* KW07 */
 	"while",	/* KW08 */
 	"do",		/* KW09 */
-	"false",	/* KW10 */
+	"False",	/* KW10 */
 	"await",	/* KW11 */
 	"import",	/* KW12 */
 	"pass",		/* KW13 */
@@ -391,7 +391,7 @@ static str keywordTable[KWT_SIZE] = {
 	"except",	/* KW15 */
 	"in",		/* KW16 */
 	"raise",	/* KW17 */
-	"true",		/* KW18 */
+	"True",		/* KW18 */
 	"class",	/* KW19 */
 	"finally",	/* KW20 */
 	"is",		/* KW21 */

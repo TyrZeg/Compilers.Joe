@@ -1,0 +1,15 @@
+# ninja log v5
+27	43	0	clean	8c45b54705a541e8
+28	152	7326608737729412	CMakeFiles/Joe.dir/MainReader.c.obj	352a8c86e0b4f886
+23	140	7326608737609791	CMakeFiles/Joe.dir/Reader.c.obj	7fab5ca51f5dade
+160	309	7326695090981868	Joe.exe	8867d2b972363b5f
+16	134	7326608737551116	CMakeFiles/Joe.dir/Compilers.c.obj	39baa2720621684f
+44	158	7326695089928074	CMakeFiles/Joe.dir/MainScanner.c.obj	2fe3fbcbd5bff9f
+30	159	7326695089948092	CMakeFiles/Joe.dir/Scanner.c.obj	cb4eeded23e7a84f
+17	30	0	clean	8c45b54705a541e8
+19	393	7328454793691436	CMakeFiles/Joe.dir/Reader.c.obj	7fab5ca51f5dade
+13	398	7328454793742739	CMakeFiles/Joe.dir/Compilers.c.obj	39baa2720621684f
+25	408	7328454793848300	CMakeFiles/Joe.dir/MainReader.c.obj	352a8c86e0b4f886
+33	409	7328454793858298	CMakeFiles/Joe.dir/MainScanner.c.obj	2fe3fbcbd5bff9f
+29	413	7328454793898271	CMakeFiles/Joe.dir/Scanner.c.obj	cb4eeded23e7a84f
+413	632	7328454795401312	Joe.exe	8867d2b972363b5f
